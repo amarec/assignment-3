@@ -5,3 +5,11 @@ date: "10/12/2018"
 output: html_document
 ---
 
+### Question 1
+
+```{r}
+accept <- dplyr::filter(clarkjudgments::acceptability, MOP == "MOP100")
+ggplot2::ggplot(accept, ggplot2::aes(rating, fill = language)) + ggplot2::geom_histogram()
+```
+
+On constate que la répartition des données ne forme pas une gaussienne; une erreur gaussienne ne serait donc pas appropriée.
